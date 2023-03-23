@@ -149,7 +149,7 @@ describe("divisibleBy", () => {
   // console.log(10 % 3)  // output: 1
   // console.log(3 % 10)  // output: 3
 
-  // if there is a remainder then the number is evenly divisible by the other number
+  // if there is no remainder then the number is evenly divisible by the other number
   // since there are two different outcomes, use two different conditions with separate outputs
 
   // input: 10 and 3
@@ -166,6 +166,89 @@ const divisibleBy = (num3, num4) => {
   }
 }
 
-
 // Write the test for a function called fizzbuzz. If a number is a multiple of 3, replace it with the word "fizz". If a number is a multiple of five, replace it with the word "buzz". If a number is a multiple of both 3 and 5, replace it with "fizzbuzz".
-// Create the function that will make the test pass.
+describe("fizzbuzz", () => {
+    it("takes a number that is a multiple of both 3 and 5 and returns it with fizzbuzz", () => {
+      expect(fizzbuzz(30)).toEqual("fizzbuzz")
+    })
+    it("takes a number that is a multiple of 3 and returns it with the word fizz", () => {
+      expect(fizzbuzz(3)).toEqual("fizz")
+    })
+    it("takes a number that is a multiple of 5 and returns it with the word buzz", () => {
+      expect(fizzbuzz(25)).toEqual("buzz")  
+    })      
+  })
+  
+  //  FAIL  ./week.test.js
+//   doubler
+//   ✓ takes a number and returns the result of the number multiplied by 2 (1 ms)
+// multiply
+//   ✓ takes two numbers as arguments and logs the result of one of the numbers multiplied by the other
+// divisibleBy
+//   ✓ takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs '10 is evenly divisible by 5'
+// fizzbuzz
+//   ✕ takes a number that is a multiple of both 3 and 5 and returns it with fizzbuzz
+//   ✕ takes a number that is a multiple of 3 and returns it with the word fizz
+//   ✕ takes a number that is a multiple of 5 and returns it with the word buzz
+
+// ● fizzbuzz › takes a number that is a multiple of both 3 and 5 and returns it with fizzbuzz
+
+//   ReferenceError: fizzbuzz is not defined
+
+  // Create the function that will make the test pass.
+  
+  // Pseudocode:
+  // input: a number named "number5" 
+  // output: string that states a number is a multiple of 3 and 5
+
+  // input: a number that is a multiple of 3
+  // output: if a number is a multiple of 3, replace with the word "fizz"
+
+  // input: 3
+  // output: "fizz"
+
+  // input: a number that is a multiple of 5
+  // output: if a number is a multiple of 5, replace with the word "buzz"
+
+  // input: 25
+  // output: "buzz"
+
+  // input: a number that is a multiple of both 3 and 5
+  // output: if a number is a multiple of both 3 and 5, replace with the word "fizzbuzz"
+
+  // input: 30
+  // output: "fizzbuzz"
+
+  // Process
+  // Create a function called "fizzbuzz" that takes in a number as an argument and returns whether a number is a multiple of both 3 and 5
+  // use modulo operators and a logical operator to determine if a number is a multiple of both 3 and 5 by looking at the remainder to be zero
+  // since there are three different outcomes, use three different conditions with separate outputs
+  // if there is no remainder then the number is a multiple of both 3 and 5
+  // if a number is a multiple of 3, return "fizz
+  // if a number is a multiple of 5, return "buzz"
+  // if a number is a multple of both 3 and 5, return "fizzbuzz"
+
+  // FUNCTION
+const fizzbuzz = (number5) => {
+  if(number5 % 3 === 0 && number5 % 5 === 0) {
+    return "fizzbuzz"
+  }
+  else if(number5 % 3 === 0) {
+    return "fizz"
+  }
+  else {number5 % 5 === 0 
+    return "buzz"
+  }
+}
+
+//  PASS  ./week.test.js
+//   doubler
+//   ✓ takes a number and returns the result of the number multiplied by 2 (1 ms)
+// multiply
+//   ✓ takes two numbers as arguments and logs the result of one of the numbers multiplied by the other
+// divisibleBy
+//   ✓ takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs '10 is evenly divisible by 5'
+// fizzbuzz
+//   ✓ takes a number that is a multiple of both 3 and 5 and returns it with fizzbuzz
+//   ✓ takes a number that is a multiple of 3 and returns it with the word fizz
+//   ✓ takes a number that is a multiple of 5 and returns it with the word buzz
