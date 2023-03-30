@@ -42,9 +42,49 @@ export default App
   }
   ```
 
-
 As a user, I can click on the box to roll the dice and see the result of my roll in the box.
+- add an onClick attribute to the div that has the styling for my box on Box.js
+- onClick will trigger the rollDice function
+- create a function named rollDice
+- input: none
+- output: result of the roll will be a number
+- since the value of the roll will be changed need react state
+```js
+  // import on App.js
+  import {useState} from "react"
+  // data that is needed, place in between the component declaration and the return statement
+  const [roll, setRoll] = useState(1)
+  const rollDice = () => {
+    let diceNumber = Math.ceil(Math.random() * 5)
+    setRoll(diceNumber)
+  }
+```
+- function call will be performed by onClick attribute on Box.js
+  - pass the function and state variable as props on Box component call 
+  - accept props on Box.js
+  - pass function into the onClick attribute
+  - reference the state variable to display the value
+```js
+  // App.js
+    <>
+      <h1>Let's Roll</h1>
+      <Box roll={roll} rollDice={rollDice} />
+    </>
+  // Box.js
+    const Box = (props) => {
+    // data needed for the component
+
+    // return statement with JSX, what is being seen on the UI
+    return(
+      <div className="box" onClick={props.rollDice}>
+        {props.roll}
+      </div>
+    )
+  }
+```
+
 As a user, I can see my roll logged and see the roll log continue to grow as I roll the dice.
+- rinse and repeat
 🏔 Stretch Goals
 As a user, I can see the image of a dice face when I roll the dice.
 As a user, I can click a restart button that clears my roll log.

@@ -1,14 +1,15 @@
 // import
 import React from "react"
 
+
 // declare functional component
-const Box = () => {
+const Box = (props) => {
   // data needed for the component
 
   // return statement with JSX, what is being seen on the UI
   return(
-    <div className="box">
-
+    <div className="box" onClick={props.rollDice}>
+      {props.roll}
     </div>
   )
 }
