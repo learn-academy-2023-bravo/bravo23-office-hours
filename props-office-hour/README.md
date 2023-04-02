@@ -118,3 +118,12 @@ export default App
 - create a function that will set all state variables to the initial value
 - pass function as props to Box.js
 - create button on Box.js to perform function call
+
+🎁 Bonus Styling
+- inline styling on Box
+- referencing tags on App.css
+- using id attributes on Log
+- using class attributes on Box
+- change browser title on index.html
+- add favicon on index.html (save image as favicon.ico) 
+reference: https://medium.com/@jenniferdobak/the-public-folder-and-favicons-in-create-react-app-8dc2cc1d492b

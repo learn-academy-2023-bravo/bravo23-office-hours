@@ -7,14 +7,12 @@ const Log = (props) => {
 
   // return statement with JSX, what is being seen on the UI
   return(
-    <>
-      <h2>Roll Log</h2>
-      <h3>
-        {props.rollLog.map((value) => {
-          return`${value}, `
-        })}
-      </h3>
-    </>
+    <div id="logStyle">
+      <h3>Roll Log</h3>
+      {props.rollLog.map((value) => {
+        return`${value}, `
+      })}
+    </div>
   )
 }
 

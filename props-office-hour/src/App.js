@@ -38,7 +38,6 @@ const App = () => {
   // return statement with JSX, what is being seen on the UI
   return(
     <>
-      <h1>Let's Roll</h1>
       <Box 
         roll={roll} 
         rollDice={rollDice} 
