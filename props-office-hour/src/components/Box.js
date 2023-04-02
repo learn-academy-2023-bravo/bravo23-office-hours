@@ -8,9 +8,12 @@ const Box = (props) => {
 
   // return statement with JSX, what is being seen on the UI
   return(
-    <div className="box" onClick={props.rollDice}>
-      {props.roll}
-    </div>
+    <>
+      <div className="box" onClick={props.rollDice}>
+        <img src={props.dice} alt={`black dice with ${props.roll} white dots`} height="200"/>
+      </div>
+      <button onClick={props.startOver}>Restart</button>
+    </>
   )
 }
 

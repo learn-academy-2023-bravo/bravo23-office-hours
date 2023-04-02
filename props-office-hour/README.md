@@ -10,7 +10,7 @@ App.js will be the logic component
 All other components (children components) will be display components.
 
 📚 User Stories
-As a user, I can see a square box on the screen with a black border and a white background.
+1. As a user, I can see a square box on the screen with a black border and a white background.
 - √ change App.js to a basic functional component
 ```js
 // import
@@ -42,7 +42,7 @@ export default App
   }
   ```
 
-As a user, I can click on the box to roll the dice and see the result of my roll in the box.
+2. As a user, I can click on the box to roll the dice and see the result of my roll in the box.
 - add an onClick attribute to the div that has the styling for my box on Box.js
 - onClick will trigger the rollDice function
 - create a function named rollDice
@@ -83,8 +83,38 @@ As a user, I can click on the box to roll the dice and see the result of my roll
   }
 ```
 
-As a user, I can see my roll logged and see the roll log continue to grow as I roll the dice.
-- rinse and repeat
+3. As a user, I can see my roll logged and see the roll log continue to grow as I roll the dice.
+- rinse and repeat for the log react state
+- initial value will be []
+- copy the values from the state variable and add values of each additional roll
+```js
+  const [roll, setRoll] = useState(1)
+  const [log, setLog] = useState([])
+  const rollDice = () => {
+    let diceNumber = Math.ceil(Math.random() * 5)
+    setRoll(diceNumber)
+    setLog([diceNumber])
+  }
+```
+- add spacing by iterating across each value and returning a comma and space between each value
+```js
+  <h3>
+    {props.rollLog.map((value) => {
+      return`${value}, `
+    })}
+  </h3>
+```
+
 🏔 Stretch Goals
-As a user, I can see the image of a dice face when I roll the dice.
-As a user, I can click a restart button that clears my roll log.
+1. As a user, I can see the image of a dice face when I roll the dice.
+- create assets folder in src directory
+- upload images into assets folder
+- create a dice array to store images
+- create a state variable to update which image is rolled by using dice number variable as the index
+- pass variable as prop to Box component
+- using img tag to display dice state variable instead of roll
+
+2. As a user, I can click a restart button that clears my roll log.
+- create a function that will set all state variables to the initial value
+- pass function as props to Box.js
+- create button on Box.js to perform function call
