@@ -2,6 +2,8 @@
 import React, {useState} from "react"
 import Bad
  from "./components/Bad"
+import Good from "./components/Good"
+import Mod from "./components/Mod"
 // functional component declaration
 const App = () => {
   // state values, inputs
@@ -32,12 +34,16 @@ const App = () => {
         value={userInput}
         onChange={handleChange}
       />
+      
       <h3>Good</h3>
+      <Good userInput={userInput}/>
 
       <h3>Bad</h3>
       <Bad userInput={userInput} badText={badText}/>
       
       <h3>Mod</h3>
+      <Mod userInput={userInput}/>
+
     </>
   )
 }
