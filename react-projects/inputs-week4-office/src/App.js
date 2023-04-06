@@ -10,6 +10,9 @@ const App = () => {
     <>
       <h1>Once, Twice, Three Times a Robot</h1>
       <input />
+      <h3>Good</h3>
+      <h3>Bad</h3>
+      <h3>Mod</h3>
     </>
   )
 }
