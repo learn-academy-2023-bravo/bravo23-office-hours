@@ -36,16 +36,14 @@ const App = () => {
         value={userInput}
         onChange={handleChange}
       />
-      <div className="under">
-        <h3>Good Robot</h3>
-        <Good userInput={userInput}/>
+      <h3 className="under">Good Robot</h3>
+      <Good userInput={userInput}/>
 
-        <h3>Bad Robot</h3>
-        <Bad userInput={userInput} badText={badText}/>
-        
-        <h3>Mod Robot</h3>
-        <Mod userInput={userInput}/>
-      </div>
+      <h3 className="under">Bad Robot</h3>
+      <Bad userInput={userInput} badText={badText}/>
+      
+      <h3 className="under">Mod Robot</h3>
+      <Mod userInput={userInput}/>
     </>
   )
 }

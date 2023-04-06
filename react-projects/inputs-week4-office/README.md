@@ -45,6 +45,23 @@ return "B" for remainder of 0
 return "L" for remainder of 1
 return "A" for remainder of 2 
 
+- potential refactor
+```js
+  const badRobot = (input) => {
+    const bla = ["B", "L", "A"]
+    return input.split("").map((value, index) => {
+      // "aloha" --> ["a", "l", "o", "h", "a"] 
+      // index:       0    1    2    3   4
+      return bla[index % bla.length]}).join("")
+      // bla[0 % 5 ]
+      // bla[0]
+      // "B"
+      // bla[1 % 5 ]
+      // bla[1]
+      // "BL"
+    
+  }
+```
 
 As a user, I see a third robot that modifies the input as per the developer's choice in real time.
 🏔 Stretch Goals
