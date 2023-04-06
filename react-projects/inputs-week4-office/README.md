@@ -11,6 +11,10 @@ As a user, I see titles of three robots waiting for my text.
 commit: robot titles
 
 As a user, I see my "Good Robot" repeating exactly what I type in real time.
+commit: good robot
+- need to store what the user is typing, using state variable called userInput
+- reference the variable under the Good title
+
 As a user, I see my "Bad Robot" saying "BLABLA....." One character for every character I type in real time.
 As a user, I see a third robot that modifies the input as per the developer's choice in real time.
 🏔 Stretch Goals
