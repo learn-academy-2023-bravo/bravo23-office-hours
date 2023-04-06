@@ -15,7 +15,37 @@ commit: good robot
 - need to store what the user is typing, using state variable called userInput
 - reference the variable under the Good title
 
+Pseudo-code
+- create a function called handleChange
+- input: DOM event from the onChange attribute from the input tag
+- output: set the value of the state variable to be the user input
+
 As a user, I see my "Bad Robot" saying "BLABLA....." One character for every character I type in real time.
+- check the pattern, every 3rd index the letter repeats
+- index + 3 
+- input:  A l o h a !
+- output: B L A B L A
+- index:  0 1 2 3 4 5
+- logic will be very long to change value solely based on index
+
+- looking at index and comparing the remainder of dividing each index by 3 is the same at every 3rd index
+- indexes for B: 0, 3, modulo % 3 = 0
+- indexes for L: 1, 4, modulo % 3 = 1
+- indexes for A: 2, 5, modulo % 3 = 2
+
+
+Pseudo-code
+- create a function called badText
+- input: a string which is the value of the state variable userInput
+- output: a string which is "B", "L", or "A" replacing each character the user typed
+- for loop will provide numbers for us to reference the indexes of the string the user types
+-
+- we will reassign the value based on the remainder of dividing the index by 3
+return "B" for remainder of 0
+return "L" for remainder of 1
+return "A" for remainder of 2 
+
+
 As a user, I see a third robot that modifies the input as per the developer's choice in real time.
 🏔 Stretch Goals
 As a user, I see a fourth robot that modifies the input as per the developer's choice in real time.

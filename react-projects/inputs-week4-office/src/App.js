@@ -1,16 +1,28 @@
 // import
 import React, {useState} from "react"
-
+import Bad
+ from "./components/Bad"
 // functional component declaration
 const App = () => {
-  // state values, inputs, and event listener method
+  // state values, inputs
   const [userInput, setUserInput] = useState("")
+ 
+
   // custom function for userInput
   const handleChange = (e) => {
    setUserInput(e.target.value)
   }
 
-  // return to the UI
+  // bad robot
+  const badText = (input) => {
+    const badStatement = []
+    for(let i = 0; i < input.length; i++) {
+      const bla = ["B", "L", "A"]
+      badStatement.push(bla[i % 3])
+    }
+    return badStatement
+  }
+  // return to the UI, place event listener method on the appropriate tag
   return(
     <>
       <h1>Once, Twice, Three Times a Robot</h1>
@@ -21,8 +33,10 @@ const App = () => {
         onChange={handleChange}
       />
       <h3>Good</h3>
-      {userInput}
+
       <h3>Bad</h3>
+      <Bad userInput={userInput} badText={badText}/>
+      
       <h3>Mod</h3>
     </>
   )
