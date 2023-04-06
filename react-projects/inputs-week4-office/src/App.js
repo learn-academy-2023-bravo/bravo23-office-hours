@@ -4,6 +4,8 @@ import Bad
  from "./components/Bad"
 import Good from "./components/Good"
 import Mod from "./components/Mod"
+import "./App.css"
+
 // functional component declaration
 const App = () => {
   // state values, inputs
@@ -34,16 +36,16 @@ const App = () => {
         value={userInput}
         onChange={handleChange}
       />
-      
-      <h3>Good</h3>
-      <Good userInput={userInput}/>
+      <div className="under">
+        <h3>Good Robot</h3>
+        <Good userInput={userInput}/>
 
-      <h3>Bad</h3>
-      <Bad userInput={userInput} badText={badText}/>
-      
-      <h3>Mod</h3>
-      <Mod userInput={userInput}/>
-
+        <h3>Bad Robot</h3>
+        <Bad userInput={userInput} badText={badText}/>
+        
+        <h3>Mod Robot</h3>
+        <Mod userInput={userInput}/>
+      </div>
     </>
   )
 }

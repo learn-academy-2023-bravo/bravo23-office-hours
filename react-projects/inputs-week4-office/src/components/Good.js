@@ -6,7 +6,7 @@ const Good = ({userInput}) => {
   // return to the UI
   return(
     <>
-      {userInput}
+      {userInput && <p>I hear you saying {userInput}. Is that correct?</p>}
     </>
   )
 }

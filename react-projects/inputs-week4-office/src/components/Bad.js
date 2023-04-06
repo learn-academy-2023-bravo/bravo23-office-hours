@@ -9,7 +9,7 @@ const Bad = ({userInput, badText}) => {
   // return to the UI
   return(
     <>
-      {badText(userInput)}
+      {userInput && <p>I hear you saying {badText(userInput)}. Is that correct?</p>}
     </>
   )
 }

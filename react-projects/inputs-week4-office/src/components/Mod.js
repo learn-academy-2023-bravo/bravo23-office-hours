@@ -6,7 +6,7 @@ const Mod = ({userInput}) => {
   // return to the UI
   return(
     <>
-      {userInput}
+      {userInput && <p>I am gonna let you finish but Beyonce is {userInput}</p>}
     </>
   )
 }
